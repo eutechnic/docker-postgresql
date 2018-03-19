@@ -1,7 +1,7 @@
 all: build
 
 build:
-	@docker build --tag=sameersbn/postgresql .
+	@docker build --tag=eutechnic/postgresql .
 
 release: build
-	@docker build --tag=sameersbn/postgresql:$(shell cat VERSION) .
+	@docker build --tag=eutechnic/postgresql:$(shell cat VERSION) .

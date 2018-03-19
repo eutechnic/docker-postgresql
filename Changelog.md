@@ -1,5 +1,8 @@
 # Changelog
 
+**10.3-1**
+- postgresql: upgrade to 10.3-1
+
 **9.6**
 - postgresql: upgrade to 9.6
 - upgrade baseimage to sameersbn/ubuntu:14.04.20170110

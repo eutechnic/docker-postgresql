@@ -17,7 +17,6 @@ fi
 if [[ -z ${1} ]]; then
   map_uidgid
 
-  create_datadir
   create_certdir
   create_logdir
   create_rundir
@@ -28,7 +27,7 @@ if [[ -z ${1} ]]; then
 
   echo "Starting PostgreSQL ${PG_VERSION}..."
   exec start-stop-daemon --start --chuid ${PG_USER}:${PG_USER} \
-    --exec ${PG_BINDIR}/postgres -- -D ${PG_DATADIR} ${EXTRA_ARGS}
+    --exec ${PG_BINDIR}/postgres -- -D ${PG_DATA} ${EXTRA_ARGS}
 else
   exec "$@"
 fi
